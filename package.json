@@ -1,0 +1,28 @@
+{
+  "name": "yuki-qa-automation-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "tsc --noEmit && eslint tests/**",
+    "build": "dotnet build ../../yuki-qa-automation/yuki-qa-automation.sln",
+    "serve": "dotnet run --project ../../yuki-qa-automation/yuki-qa-automation-frontend/yuki-qa-automation-frontend.csproj --urls http://localhost:5000",
+    "test": "start-server-and-test serve http://localhost:5000 \"playwright test\"",
+    "test:ui": "start-server-and-test serve http://localhost:5000 \"playwright test --ui\"",
+    "test:staging": "start-server-and-test serve http://localhost:5000 \"playwright test --config=config/staging.config.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
+    "prettier": "3.6.2",
+    "start-server-and-test": "^2.1.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  }
+}
