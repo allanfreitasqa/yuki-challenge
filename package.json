@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "pretest": "tsc --noEmit && eslint tests/**",
-    "build": "dotnet build ../../yuki-qa-automation/yuki-qa-automation.sln",
-    "serve": "dotnet run --project ../../yuki-qa-automation/yuki-qa-automation-frontend/yuki-qa-automation-frontend.csproj --urls http://localhost:5000",
+    "build": "dotnet build ./yuki-qa-automation/yuki-qa-automation.sln",
+    "serve": "dotnet run --project ./yuki-qa-automation/yuki-qa-automation-frontend/yuki-qa-automation-frontend.csproj --urls http://localhost:5000",
     "test": "start-server-and-test serve http://localhost:5000 \"playwright test\"",
     "test:ui": "start-server-and-test serve http://localhost:5000 \"playwright test --ui\"",
-    "test:staging": "start-server-and-test serve http://localhost:5000 \"playwright test --config=config/staging.config.ts\""
+    "test:staging": "start-server-and-test serve http://localhost:5000 \"playwright test --config=config/staging.config.ts\"",
+    "report": "playwright show-report"
   },
   "keywords": [],
   "author": "",

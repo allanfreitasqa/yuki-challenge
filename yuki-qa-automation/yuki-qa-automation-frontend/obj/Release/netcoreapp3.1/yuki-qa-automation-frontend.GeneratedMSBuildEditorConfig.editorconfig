@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = yuki_qa_automation_frontend
+build_property.ProjectDir = C:\Users\allan\Downloads\qa-automation-test\yuki-qa-automation-test\yuki-qa-automation\yuki-qa-automation-frontend\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
